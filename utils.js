@@ -6,8 +6,8 @@ function* range(start, end, step = 1) {
   }
 }
 
-function trace(input, counter) {
-  return `len: ${input.length}, time: ${counter.count}`;
+function trace(size = 0, cost = 0) {
+  return `len: ${size}, time: ${cost}`;
 }
 
 export {
