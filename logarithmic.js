@@ -1,34 +1,40 @@
 import Counter from './counter';
 import { range, trace } from './utils';
 
+/**
+ * Given a sorted array of integers, find the target
+ * @param {Array} arr
+ * @param {Number} target 
+ */
 function binarySearch(arr, target) {
-  // TODO: create a counter
+  const counter = new Counter();
 
   let left = 0;
   let right = arr.length - 1;
   while (left <= right) {
-    // TODO: increment counter
+    counter.inc();
 
     let mid = Math.floor((left + right) / 2);
 
     if (arr[mid] === target) {
       console.log(`Found ${mid}`);
-      // TODO: return trace
-
+      return trace(arr.length, counter.count);
     } else if (arr[mid] < target) {
       left = mid + 1;
-      // TODO: increment counter
-
+      counter.inc();
     } else {
       right = mid - 1;
-      // TODO: increment counter
-
+      counter.inc();
     }
   }
   
   console.log("Not found");
 
-  // TODO: return trace
+  return trace(arr.length, counter.count);
 }
 
-// TODO: invoke binarySearch with various arrays, long arrays
+binarySearch([1,2,3], 3);
+binarySearch([1,2,3,4,5,6], 8);
+binarySearch([...range(0, 1000)], 2000);
+binarySearch([...range(0, 100000)], 200000);
+binarySearch([...range(0, 10000000)], 20000000);

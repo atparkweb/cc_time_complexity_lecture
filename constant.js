@@ -1,16 +1,19 @@
 import Counter from './counter';
-import { range } from './utils';
+import { range, trace } from './utils';
 
 function firstItem(arr) {
-  // TODO: create a counter
+  const counter = new Counter();
 
   const result = arr[0];
-
-  // TODO: increment the counter
+  counter.inc();
 
   console.log(result);
 
-  // TODO: return trace output
+  return trace(arr.length, counter.count);
 }
 
-// TODO: invoke firstItem with various array lengths
+// firstItem([1]);
+// firstItem([1, 2]);
+// firstItem([1, 2, 3, 4]);
+// firstItem([...range(0, 100)]);
+// firstItem([...range(0, 1000000)]);

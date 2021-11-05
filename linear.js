@@ -11,11 +11,17 @@ function linearSearch(arr, target) {
     if (arr[i] === target) {
       console.log(`Found item: ${target}`);
       
-      // TODO: return the trace result
     }
   }
 
+  // TODO: Try adding another operation with count increment
+
+  // TODO: Try adding another for loop
+
   console.log(`${target} not found in the array`);
+
+  // TODO: return the trace result
+  return trace(arr.length, counter.count);
 }
 
 // TODO: invoke linearSearch with various sized arrays
