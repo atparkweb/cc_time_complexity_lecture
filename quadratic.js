@@ -20,7 +20,7 @@ function nestedLoop(arr) {
 
 // nestedLoop([1]);
 // nestedLoop([1, 2]);
-// nestedLoop([1, 2, 3, 4]);
+// nestedLoop([1, 2, 3, 4, 5]);
 // nestedLoop([...range(0, 25)]);
 // nestedLoop([...range(0, 50)]);
 // nestedLoop([...range(0, 51)]);
