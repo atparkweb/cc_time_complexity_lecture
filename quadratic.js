@@ -1,7 +1,8 @@
-import Counter from './counter';
-import { range, trace } from './utils';
+import Counter from './counter.js';
+import { range, trace } from './utils.js';
 
 function nestedLoop(arr) {
+  console.time("loop");
   const counter = new Counter();
 
   const result = [];
@@ -15,6 +16,7 @@ function nestedLoop(arr) {
   
   console.log(result);
 
+  console.timeEnd("loop");
   return trace(arr.length, counter.count);
 }
 
@@ -24,3 +26,5 @@ function nestedLoop(arr) {
 // nestedLoop([...range(0, 25)]);
 // nestedLoop([...range(0, 50)]);
 // nestedLoop([...range(0, 51)]);
+
+export default nestedLoop;

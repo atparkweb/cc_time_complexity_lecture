@@ -17,3 +17,5 @@ function firstItem(arr) {
 // firstItem([1, 2, 3, 4]);
 // firstItem([...range(0, 100)]);
 // firstItem([...range(0, 1000000)]);
+
+export default firstItem;

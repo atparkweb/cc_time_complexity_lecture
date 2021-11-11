@@ -38,3 +38,5 @@ function binarySearch(arr, target) {
 // binarySearch([...range(0, 1000)], 2000);
 // binarySearch([...range(0, 100000)], 200000);
 // binarySearch([...range(0, 10000000)], 20000000);
+
+export default binarySearch;
