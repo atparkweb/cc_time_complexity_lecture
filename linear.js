@@ -1,5 +1,5 @@
-import Counter from './counter';
-import { range, trace } from './utils';
+import Counter from './counter.js';
+import { range, trace } from './utils.js';
 
 function linearSearch(arr, target) {
   //  TODO: create a counter
@@ -22,3 +22,5 @@ function linearSearch(arr, target) {
 }
 
 // TODO: invoke linearSearch with various sized arrays
+
+export default linearSearch;

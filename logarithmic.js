@@ -1,5 +1,5 @@
-import Counter from './counter';
-import { range, trace } from './utils';
+import Counter from './counter.js';
+import { range, trace } from './utils.js';
 
 /**
  * Given a sorted array of integers, find the target
