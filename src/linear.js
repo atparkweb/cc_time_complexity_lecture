@@ -2,25 +2,32 @@ import Counter from './counter.js';
 import { range, trace } from './utils.js';
 
 function linearSearch(arr, target) {
-  //  TODO: create a counter
+  const counter = new Counter();
+  let found = false;
 
   for (let i = 0; i < arr.length; i++) {
-    // TODO: increment the counter
-    console.log(`Item at ${i}`);
-
+    counter.inc();
     if (arr[i] === target) {
       console.log(`Found item: ${target}`);
+      found = true;
+      break;
     }
   }
 
   // TODO: Try adding another operation with count increment
   // TODO: Try adding another for loop
 
-  console.log(`${target} not found in the array`);
+  if (!found) {
+    console.log(`${target} not found in the array`);
+  }
 
   return trace(arr.length, counter.count);
 }
 
-// TODO: invoke linearSearch with various sized arrays
+// linearSearch([1], 1);                     //?
+// linearSearch([11, 3], 3);                 //?
+// linearSearch([0, 4, 1, 10], 10);          //?
+// linearSearch([...range(0, 100)], 100);    //?
+// linearSearch([...range(0, 10000)], 9999); //?
 
 export default linearSearch;
