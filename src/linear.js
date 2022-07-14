@@ -20,7 +20,7 @@ function linearSearch(arr, target) {
   // TODO: Try adding another operation with count increment
   // TODO: Try adding another for loop
 
-  console.log(trace(len, counter.count));
+  trace(len, counter.count);
 
   return -1;
 }

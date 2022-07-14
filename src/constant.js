@@ -12,7 +12,7 @@ function increaseItemAt(arr, i) {
   arr[i] += 1;
   counter.inc(1);
 
-  console.log(trace(arr.length, counter.count));
+  trace(arr.length, counter.count);
 }
 
 function run() {

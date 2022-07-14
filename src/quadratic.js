@@ -28,7 +28,7 @@ function selectionSort(arr,  n) {
     swap(arr, minIndex, i);
   }
 
-  console.log(trace(arr.length, counter.count));
+  trace(arr.length, counter.count);
 }
  
 function run() {

@@ -19,7 +19,9 @@
  * @returns {string}
  */
 function trace(size = 0, cost = 0) {
-  return `len: ${size}, steps: ${cost}`;
+  const output = `len: ${size}, steps: ${cost}`;
+  console.log(output);
+  return output;
 }
 
 /**

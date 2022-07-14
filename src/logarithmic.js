@@ -1,5 +1,5 @@
 const Counter = require('./lib/counter.js');
-const { range, trace } = require('./lib/utils.js');
+const { trace, getRandomInput } = require('./lib/utils.js');
 
 /**
  * Given a sorted array of integers, find the target
@@ -26,18 +26,16 @@ function binarySearch(arr, target) {
       counter.inc();
     }
   }
-  
-  console.log("Not found");
 
-  return trace(arr.length, counter.count);
+  trace(arr.length, counter.count);
 }
 
 function run() {
   binarySearch([1,2,3], 3);
   binarySearch([11,2,3,40,5,63], 8);
-  binarySearch([...range(0, 1000)], 2000);
-  binarySearch([...range(0, 100000)], 200000);
-  binarySearch([...range(0, 1000000)], 2000);
+  binarySearch(getRandomInput(1000), 2000);
+  binarySearch(getRandomInput(100000), 200000);
+  binarySearch(getRandomInput(1000000), 2000);
 }
 
 module.exports = { run };
