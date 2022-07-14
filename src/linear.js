@@ -1,5 +1,5 @@
-import Counter from './lib/counter.js';
-import { getRandomInput, trace } from './lib/utils.js';
+const Counter = require('./lib/counter.js');
+const { getRandomInput, trace } = require('./lib/utils.js');
 
 function linearSearch(arr, target) {
   const counter = new Counter();
@@ -25,10 +25,12 @@ function linearSearch(arr, target) {
   return -1;
 }
 
-linearSearch([1], 2);
-linearSearch([11, 3], 3);
-linearSearch([0, 4, 1, 10], 10);
-linearSearch(getRandomInput(100), 45);
-linearSearch(getRandomInput(1000000), 1000000);
+function run() {
+  linearSearch([1], 2);
+  linearSearch([11, 3], 3);
+  linearSearch([0, 4, 1, 10], 10);
+  linearSearch(getRandomInput(100), 45);
+  linearSearch(getRandomInput(1000000), 1000000);
+}
 
-export default linearSearch;
+module.exports = { run };

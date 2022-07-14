@@ -39,7 +39,7 @@ function getRandomInput(size = 10) {
   return arr;
 }
 
-export {
+module.exports = {
   trace,
   getRandomInput
 };

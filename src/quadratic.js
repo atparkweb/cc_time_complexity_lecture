@@ -1,5 +1,5 @@
-import Counter from './lib/counter.js';
-import { getRandomInput, trace } from './lib/utils.js';
+const Counter = require('./lib/counter.js');
+const { getRandomInput, trace } = require('./lib/utils.js');
 
 function swap(arr, x, y) {
   const temp = arr[x];
@@ -31,13 +31,14 @@ function selectionSort(arr,  n) {
   console.log(trace(arr.length, counter.count));
 }
  
+function run() {
+  selectionSort([1], 1);
+  selectionSort([3, 2], 2);
+  selectionSort([1, 20, 3, 14, 5], 5);
+  selectionSort(getRandomInput(25), 25);
+  selectionSort(getRandomInput(50), 50);
+  selectionSort(getRandomInput(75), 100);
+  selectionSort(getRandomInput(100), 200);
+}
 
-selectionSort([1], 1);
-selectionSort([3, 2], 2);
-selectionSort([1, 20, 3, 14, 5], 5);
-selectionSort(getRandomInput(25), 25);
-selectionSort(getRandomInput(50), 50);
-selectionSort(getRandomInput(75), 100);
-selectionSort(getRandomInput(100), 200);
-
-export default selectionSort;
+module.exports = { run };

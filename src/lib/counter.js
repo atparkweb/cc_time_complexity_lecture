@@ -11,4 +11,4 @@ class Counter {
   }
 }
 
-export default Counter;
+module.exports = Counter;
