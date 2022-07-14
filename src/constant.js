@@ -1,21 +1,21 @@
 import Counter from './lib/counter.js';
 import { range, trace } from './lib/utils.js';
 
-function firstItem(arr) {
+function increaseItemAt(arr, i) {
   const counter = new Counter();
 
-  const result = arr[0];
-  counter.inc();
+  if (i < 0 || i >= arr.length) throw new RangeError('Index out of range');
+  counter.inc(2);
+  arr[i] += 1;
+  counter.inc(1);
 
-  console.log(result);
-
-  return trace(arr.length, counter.count);
+  trace(arr.length, counter.count);
 }
 
-firstItem([1]);                        //?
-//firstItem([1, 2]);                   //?
-//firstItem([1, 2, 3, 4]);             //?
-//firstItem([...range(0, 100)]);       //?
-firstItem([...range(0, 1000000)]);     //?
+increaseItemAt([1], 0);
+//increaseItemAt([1, 2], 1);
+//increaseItemAt([1, 2, 3, 4], 2);
+//increaseItemAt([...range(0, 100)], 21);
+increaseItemAt([...range(0, 1000000)], 3000);
 
-export default firstItem;
+export default increaseItemAt;
