@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/atparkweb/cc_time_complexity_lecture/issues"
   },
-  "homepage": "https://github.com/atparkweb/cc_time_complexity_lecture#readme"
+  "homepage": "https://github.com/atparkweb/cc_time_complexity_lecture#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
