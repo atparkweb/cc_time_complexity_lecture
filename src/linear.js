@@ -27,10 +27,12 @@ function linearSearch(arr, target) {
 
 function run() {
   linearSearch([1], 2);
-  linearSearch([11, 3], 3);
-  linearSearch([0, 4, 1, 10], 10);
-  linearSearch(getRandomInput(100), 45);
-  linearSearch(getRandomInput(1000000), 1000000);
+  linearSearch(getRandomInput(2), 3);
+  linearSearch(getRandomInput(4), 5);
+  linearSearch(getRandomInput(8), 9);
+  linearSearch(getRandomInput(16), 17);
+  linearSearch(getRandomInput(32), 33);
+  //linearSearch(getRandomInput(1000000), 33);
 }
 
 module.exports = { run };

@@ -17,10 +17,12 @@ function increaseItemAt(arr, i) {
 
 function run() {
   increaseItemAt([1], 0);
-  increaseItemAt([1, 2], 1);
-  increaseItemAt([1, 2, 3, 4], 2);
-  increaseItemAt(getRandomInput(1000), 21);
-  increaseItemAt(getRandomInput(1000000), 3000);
+  increaseItemAt(getRandomInput(2), 1);
+  increaseItemAt(getRandomInput(4), 3);
+  increaseItemAt(getRandomInput(8), 7);
+  increaseItemAt(getRandomInput(16), 12);
+  increaseItemAt(getRandomInput(32), 4);
+  increaseItemAt(getRandomInput(1000000), 4);
 }
 
 module.exports = { run };

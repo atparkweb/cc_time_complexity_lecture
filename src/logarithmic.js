@@ -31,11 +31,13 @@ function binarySearch(arr, target) {
 }
 
 function run() {
-  binarySearch([1,2,3], 3);
-  binarySearch([11,2,3,40,5,63], 8);
-  binarySearch(getRandomInput(1000), 2000);
-  binarySearch(getRandomInput(100000), 200000);
-  binarySearch(getRandomInput(1000000), 2000);
+  binarySearch([1], 3);
+  binarySearch(getRandomInput(2), 4);
+  binarySearch(getRandomInput(4), 8);
+  binarySearch(getRandomInput(8), 20);
+  binarySearch(getRandomInput(16), 32);
+  binarySearch(getRandomInput(32), 43);
+  //binarySearch(getRandomInput(1000000), 43);
 }
 
 module.exports = { run };
