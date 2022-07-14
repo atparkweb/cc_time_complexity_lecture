@@ -1,5 +1,5 @@
 import Counter from './counter.js';
-import { range, trace } from './utils.js';
+import { range, trace } from './lib/utils.js';
 
 /**
  * Given a sorted array of integers, find the target
@@ -33,9 +33,9 @@ function binarySearch(arr, target) {
 }
 
 binarySearch([1,2,3], 3);                               //?
-// binarySearch([11,2,3,40,5,63], 8);                   //?
-// binarySearch([...range(0, 1000)], 2000);             //?
-// binarySearch([...range(0, 100000)], 200000);         //?
-// binarySearch([...range(0, 10000000)], 20000000);     //?
+binarySearch([11,2,3,40,5,63], 8);                      //?
+binarySearch([...range(0, 1000)], 2000);                //?
+binarySearch([...range(0, 100000)], 200000);            //?
+binarySearch([...range(0, 1000000)], 2000);             //?
 
 export default binarySearch;

@@ -1,5 +1,5 @@
 import Counter from './counter.js';
-import { range, trace } from './utils.js';
+import { range, trace } from './lib/utils.js';
 
 function swap(arr, x, y) {
     var temp = arr[x];
@@ -32,12 +32,12 @@ function selectionSort(arr,  n) {
 }
  
 
-selectionSort([1], 1);                    //?
-// selectionSort([3, 2], 2);                //?
-// selectionSort([1, 20, 3, 14, 5], 5);       //?
-// selectionSort([...range(0, 25)], 25);    //?
-// selectionSort([...range(0, 50)], 50);    //?
-// selectionSort([...range(0, 51)], 100);    //?
-// selectionSort([...range(0, 51)], 200);    //?
+selectionSort([1], 1);                      //?
+selectionSort([3, 2], 2);                   //?
+selectionSort([1, 20, 3, 14, 5], 5);        //?
+selectionSort([...range(0, 25)], 25);       //?
+selectionSort([...range(0, 50)], 50);       //?
+selectionSort([...range(0, 51)], 100);      //?
+selectionSort([...range(0, 51)], 200);      //?
 
 export default selectionSort;

@@ -1,5 +1,5 @@
-import Counter from './counter.js';
-import { range, trace } from './utils.js';
+import Counter from './lib/counter.js';
+import { range, trace } from './lib/utils.js';
 
 function firstItem(arr) {
   const counter = new Counter();
@@ -12,10 +12,10 @@ function firstItem(arr) {
   return trace(arr.length, counter.count);
 }
 
-//firstItem([1]);                      //?
+firstItem([1]);                        //?
 //firstItem([1, 2]);                   //?
 //firstItem([1, 2, 3, 4]);             //?
 //firstItem([...range(0, 100)]);       //?
-//firstItem([...range(0, 10>00000)]);  //?
+firstItem([...range(0, 1000000)]);     //?
 
 export default firstItem;
