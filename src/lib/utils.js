@@ -1,8 +1,8 @@
 /**
  * Generate a range of integers from start to end
- * @param {Number} start 
- * @param {Number} end 
- * @param {Number} step 
+ * @param {number} start 
+ * @param {number} end 
+ * @param {number} step 
  */
  function* range(start, end, step = 1) {
   let current = start;
@@ -14,12 +14,12 @@
 
 /**
  * Format the input and time cost as a string
- * @param {Number} size 
- * @param {Number} cost 
- * @returns 
+ * @param {number} size 
+ * @param {number} cost 
+ * @returns {string}
  */
 function trace(size = 0, cost = 0) {
-  return `len: ${size}, time: ${cost}`;
+  return `len: ${size}, steps: ${cost}`;
 }
 
 /**
@@ -34,7 +34,7 @@ function shuffle(arr) {
 }
 
 function getRandomInput(size = 10) {
-  const arr = [...range(0, 10000)];
+  const arr = [...range(0, size)];
   shuffle(arr);
   return arr;
 }
