@@ -22,17 +22,24 @@ function trace(size = 0, cost = 0) {
   return `len: ${size}, time: ${cost}`;
 }
 
-function shuffleArray(arr) {
+/**
+ * Shuffle an array in place. Original array is mutated.
+ * @param {Array} arr 
+ */
+function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j]], arr[i];
   }
+}
 
+function getRandomInput(size = 10) {
+  const arr = [...range(0, 10000)];
+  shuffle(arr);
   return arr;
 }
 
 export {
-  range,
   trace,
-  shuffleArray
+  getRandomInput
 };
