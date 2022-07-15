@@ -22,7 +22,7 @@ function run() {
   increaseItemAt(getRandomInput(8), 7);
   increaseItemAt(getRandomInput(16), 12);
   increaseItemAt(getRandomInput(32), 4);
-  increaseItemAt(getRandomInput(1000000), 4);
+  //increaseItemAt(getRandomInput(1000000), 4);
 }
 
 module.exports = { run };
