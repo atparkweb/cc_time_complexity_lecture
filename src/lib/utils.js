@@ -21,7 +21,7 @@
 function trace(size = 0, cost = 0) {
   const output = `len: ${size}, steps: ${cost}`;
   console.log(output);
-  console.log('⬜'.repeat(cost));
+  console.log('⬜ '.repeat(cost));
   return output;
 }
 
