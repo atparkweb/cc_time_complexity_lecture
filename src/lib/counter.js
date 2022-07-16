@@ -4,10 +4,15 @@
  */
 class Counter {
   constructor() {
-    this.count = 0;
+    this.total = 0;
   }
+
   inc(step = 1) {
-    this.count += step;
+    this.total += step;
+  }
+
+  reset() {
+    this.total = 0;
   }
 }
 
