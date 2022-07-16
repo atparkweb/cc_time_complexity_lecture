@@ -4,7 +4,7 @@ const { getRandomInput, trace } = require('./lib/utils.js');
 function increaseItemAt(arr, i) {
   const counter = new Counter();
 
-  counter.inc(2); // 2 comparisons below
+  counter.inc(2); // two comparisons below
   if (i < 0 || i >= arr.length) {
     throw new RangeError('Index out of range');
   }
@@ -12,7 +12,7 @@ function increaseItemAt(arr, i) {
   arr[i] += 1;
   counter.inc(1);
 
-  trace(arr.length, counter.count);
+  trace(arr.length, counter.total);
 }
 
 function run() {
@@ -22,7 +22,6 @@ function run() {
   increaseItemAt(getRandomInput(8), 7);
   increaseItemAt(getRandomInput(16), 12);
   increaseItemAt(getRandomInput(32), 4);
-  //increaseItemAt(getRandomInput(1000000), 4);
 }
 
 module.exports = { run };

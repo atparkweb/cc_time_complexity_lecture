@@ -17,10 +17,7 @@ function linearSearch(arr, target) {
     }
   }
 
-  // TODO: Try adding another operation with count increment
-  // TODO: Try adding another for loop
-
-  trace(len, counter.count);
+  trace(len, counter.total);
 
   return -1;
 }
@@ -32,7 +29,6 @@ function run() {
   linearSearch(getRandomInput(8), 9);
   linearSearch(getRandomInput(16), 17);
   linearSearch(getRandomInput(32), 33);
-  //linearSearch(getRandomInput(1000000), 33);
 }
 
 module.exports = { run };

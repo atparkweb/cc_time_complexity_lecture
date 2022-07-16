@@ -17,7 +17,7 @@ function binarySearch(arr, target) {
 
     if (arr[mid] === target) {
       console.log(`Found ${mid}`);
-      return trace(arr.length, counter.count);
+      return trace(arr.length, counter.total);
     } else if (arr[mid] < target) {
       left = mid + 1;
       counter.inc();
@@ -27,7 +27,7 @@ function binarySearch(arr, target) {
     }
   }
 
-  trace(arr.length, counter.count);
+  trace(arr.length, counter.total);
 }
 
 function run() {
