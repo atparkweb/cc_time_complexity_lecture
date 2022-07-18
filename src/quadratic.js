@@ -28,12 +28,11 @@ function selectionSort(arr) {
 }
 
 function run() {
-  selectionSort([1]);
-  selectionSort(getRandomInput(2));
-  selectionSort(getRandomInput(4));
-  selectionSort(getRandomInput(8));
-  selectionSort(getRandomInput(16));
-  selectionSort(getRandomInput(32));
+  const start = 1, end = 32;
+
+  for (let i = start; i <= end; i *= 2) {
+    selectionSort(getRandomInput(i));
+  }
 }
 
 module.exports = { run };
