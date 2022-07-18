@@ -23,12 +23,11 @@ function linearSearch(arr, target) {
 }
 
 function run() {
-  linearSearch([1], 2);
-  linearSearch(getRandomInput(2), 3);
-  linearSearch(getRandomInput(4), 5);
-  linearSearch(getRandomInput(8), 9);
-  linearSearch(getRandomInput(16), 17);
-  linearSearch(getRandomInput(32), 33);
+  const argList = [[1, 2], [2, 3], [4, 5], [8, 9], [16, 17], [32, 33]];
+
+  argList.forEach(([size, i]) => {
+    linearSearch(getRandomInput(size), i);
+  });
 }
 
 module.exports = { run };

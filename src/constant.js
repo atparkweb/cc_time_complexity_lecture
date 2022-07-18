@@ -16,12 +16,11 @@ function increaseItemAt(arr, i) {
 }
 
 function run() {
-  increaseItemAt([1], 0);
-  increaseItemAt(getRandomInput(2), 1);
-  increaseItemAt(getRandomInput(4), 3);
-  increaseItemAt(getRandomInput(8), 7);
-  increaseItemAt(getRandomInput(16), 12);
-  increaseItemAt(getRandomInput(32), 4);
+  const argList = [[1, 0], [2, 1], [4, 3], [8, 7], [16, 15], [32, 31]];
+
+  argList.forEach(([size, i]) => {
+    increaseItemAt(getRandomInput(size), i);
+  });
 }
 
 module.exports = { run };
