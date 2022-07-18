@@ -31,13 +31,11 @@ function binarySearch(arr, target) {
 }
 
 function run() {
-  binarySearch([1], 3);
-  binarySearch(getRandomInput(2), 4);
-  binarySearch(getRandomInput(4), 8);
-  binarySearch(getRandomInput(8), 20);
-  binarySearch(getRandomInput(16), 32);
-  binarySearch(getRandomInput(32), 43);
-  //binarySearch(getRandomInput(1000000), 43);
+  const argList = [[1, 3], [2, 4], [4, 8], [8, 20], [16, 32], [32, 43]];
+
+  argList.forEach(([size, i]) => {
+    binarySearch(getRandomInput(size), i);
+  });
 }
 
 module.exports = { run };
